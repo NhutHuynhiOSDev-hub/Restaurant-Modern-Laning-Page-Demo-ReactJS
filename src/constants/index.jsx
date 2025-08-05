@@ -13,7 +13,13 @@ import indian from "../assets/images/indian.jpeg";
 import italian from "../assets/images/italian.jpeg";
 import japanese from "../assets/images/japanese.jpeg";
 
-import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
+import {
+  FaFacebook,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa6";
+import { FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
 
 export const LINKS = [
   { text: "Dishes", targetId: "dishes" },
@@ -119,23 +125,22 @@ export const REVIEW = {
 };
 
 export const CONTACT = [
-  { key: "address", value: "Address: 123 Main Street, Paris, France, 345678" },
-  { key: "phone", value: "Phone: 123-456-7890" },
-  { key: "email", value: "Email: contact@restaurant.com" },
+  { key: "phone", value: "Phone: (+84) 09075 09033" },
+  { key: "email", value: "Email: nhuthuynhiosdev@gmail.com" },
+  { key: "address", value: "Address: Ho Chi Minh, Vietnam" },
 ];
 
 export const SOCIAL_MEDIA_LINKS = [
   {
-    href: "https://x.com/",
-    icon: <FaFacebook fontSize={30} className="hover:opacity-80" />,
+    href: "https://www.linkedin.com/in/nhut-huynh-quang-3b8126203",
+    icon: <FaLinkedinIn fontSize={30} className="hover:opacity-80" />,
   },
-
   {
-    href: "https://x.com/",
+    href: "https://www.facebook.com/NhutHuynh.231",
+    icon: <FaFacebookF fontSize={30} className="hover:opacity-80" />,
+  },
+  {
+    href: "https://www.facebook.com/NhutHuynh.231",
     icon: <FaInstagram fontSize={30} className="hover:opacity-80" />,
-  },
-  {
-    href: "https://x.com/",
-    icon: <FaXTwitter fontSize={30} className="hover:opacity-80" />,
   },
 ];
