@@ -6,6 +6,8 @@ import NavBar from "./components/NavBar";
 import Mission from "./components/Mission";
 import Expertise from "./components/Expertise";
 import HeroSection from "./components/HeroSection";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
       <Mission />
       <Expertise />
       <Review />
+      <Contact />
+      <Footer />
     </main>
   );
 };
