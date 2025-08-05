@@ -1,5 +1,6 @@
 import React from "react";
 import { SOCIAL_MEDIA_LINKS } from "../constants";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
@@ -19,12 +20,22 @@ export default function Footer() {
           );
         })}
       </div>
-      <p className="mt-8 text-center tracking-tighter text-neutral-500">
+      <motion.p
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="mt-8 text-center tracking-tighter text-neutral-500"
+      >
         &copy;compiletab. All rights reserved
-      </p>
-      <p className="text-center tracking-tighter text-neutral-500">
+      </motion.p>
+      <motion.p
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
+        className="text-center tracking-tighter text-neutral-500"
+      >
         cloned by Nhut Huynh with ❤️
-      </p>
+      </motion.p>
     </section>
   );
 }

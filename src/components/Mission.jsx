@@ -1,7 +1,9 @@
 import React from "react";
-import missionVideo from "../assets/videos/mission.mp4";
 import mission from "../assets/images/mission.jpeg";
+import missionVideo from "../assets/videos/mission.mp4";
+
 import { MISSION } from "../constants";
+import { motion } from "framer-motion";
 
 export default function Mission() {
   return (
@@ -10,7 +12,11 @@ export default function Mission() {
         Our Mission
       </h2>
       <div className="relative flex items-center justify-center">
-        <video
+        <motion.video
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
           className="w-full rounded-3xl"
           poster={mission}
           src={missionVideo}
@@ -20,10 +26,22 @@ export default function Mission() {
           loop
           playsInline
         />
-        <div className="absolute h-full w-full rounded-3xl bg-black/40"></div>
-        <p className="absolute max-w-lg text-center tracking-tighter text-white lg:text-3xl">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="absolute h-full w-full rounded-3xl bg-black/40"
+        ></motion.div>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.55 }}
+          className="absolute max-w-lg text-center tracking-tighter text-white lg:text-3xl"
+        >
           {MISSION}
-        </p>
+        </motion.p>
       </div>
     </section>
   );
