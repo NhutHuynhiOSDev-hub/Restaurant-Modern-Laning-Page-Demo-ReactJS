@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import HeroSection from "./components/HeroSection";
 import About from "./components/About";
 import Mission from "./components/Mission";
+import Expertise from "./components/Expertise";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Dishes />
       <About />
       <Mission />
+      <Expertise />
     </main>
   );
 };
