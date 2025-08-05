@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../assets/images/logo.png";
 import hero from "../assets/images/hero.jpeg";
 import heroVideo from "../assets/videos/hero.mp4";
-import missionVideo from "../assets/videos/mission.mp4";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
@@ -12,6 +12,7 @@ const HeroSection = () => {
           src={heroVideo}
           autoPlay
           muted
+          poster={hero}
           loop
           playsInline
           className="h-full w-full object-cover"
@@ -19,7 +20,14 @@ const HeroSection = () => {
       </div>
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-70% to-black"></div>
       <div className="pb20 relative z-20 flex h-screen flex-col justify-end">
-        <img src={logo} alt="restaura" className="w-full p-4" />
+        <motion.img
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          src={logo}
+          alt="restaura"
+          className="w-full p-4"
+        />
         <p className="p-4 text-lg tracking-tighter text-white">Paris</p>
       </div>
     </section>

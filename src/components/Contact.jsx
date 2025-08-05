@@ -1,6 +1,8 @@
 import React from "react";
 import { CONTACT } from "../constants";
 
+import { motion } from "framer-motion";
+
 export default function Contact() {
   return (
     <section className="container mx-auto px-12 py-16" id="contact">
@@ -11,9 +13,14 @@ export default function Contact() {
         {CONTACT.map((item, index) => {
           return (
             <div key={index}>
-              <p className="my-20 border-b-2 border-neutral-700 pb-12 text-center text-2xl tracking-tighter lg:text-3xl">
+              <motion.p
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="my-20 border-b-2 border-neutral-700 pb-12 text-center text-2xl tracking-tighter lg:text-3xl"
+              >
                 {item.value}
-              </p>
+              </motion.p>
             </div>
           );
         })}
