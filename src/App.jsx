@@ -1,11 +1,12 @@
-import React from 'react';
-import HeroSection from './components/HeroSection';
-
+import React from "react";
+import NavBar from "./components/NavBar";
+import HeroSection from "./components/HeroSection";
 const App = () => {
   return (
-    <div>
+    <main className="overflow-y-hidden text-neutral-900 antialiased">
+      <NavBar />
       <HeroSection />
-    </div>
+    </main>
   );
 };
 
